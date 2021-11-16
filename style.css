@@ -79,7 +79,7 @@ header {
 /*------------------MENSAGENS-----------------------*/
 
 main {
-    background-color: #F3F3F3;
+    
     height: 95vh;
     width: 100%;
 }
@@ -89,6 +89,9 @@ main {
     flex-direction: column;
 
     padding-top: 100px;
+    padding-bottom: 95px;
+
+    background-color: #F3F3F3;
 }
 
 .mensagem {
@@ -166,6 +169,8 @@ main {
 
     display: flex;
     flex-direction: column;
+
+    overflow: scroll;
 }
 
 .mostrar-menu{
@@ -232,6 +237,18 @@ main {
 
 .mostrar-check-contato {
     display: flex;
+}
+
+.identificador-contato {
+    display: flex;
+}
+
+.identificador-visibilidade {
+    display: flex;
+}
+
+.botao-enviar:hover{
+    cursor: pointer;
 }
 
 

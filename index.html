@@ -20,42 +20,27 @@
     </header>
     <main>
         <div class="caixa-de-mensagens">
-            <div class="mensagem mensagem-normal">
-                <p><time>(09:22:38)  </time><strong>     Maria</strong> para <strong>João</strong>: Oi João :)</p>
-            </div>
-            <div class="mensagem mensagem-reservada">
-                <p><time>(09:22:38)  </time><strong>     João</strong> reservadamente para <strong>Maria</strong>: Oi gatinha quer tc? kjasbfkjbf sebgksjabfksjabdkjsb </p>
-            </div>
-            <div class="mensagem mensagem-status">
-                <p><time>(09:22:38)   </time><strong>     Maria</strong> sai da sala...</p>
-            </div>
         </div>
     </main>
     <div class="caixa-de-digitacao">
         <div class="elementos-caixa-de-digitacao">
-            <input type="text" placeholder="Escreva aqui...">
-            <ion-icon name="paper-plane-outline"></ion-icon>
+            <input class="input-mensagem" type="text" placeholder="Escreva aqui...">
+            <ion-icon onclick="enviarMensagens()" class="botao-enviar" data-identifier="send-message" name="paper-plane-outline"></ion-icon>
         </div>
     </div>
     <div class="menu-lateral">
         <div class="fundo-escuro" onclick="esconderMenu()"></div>
         <div class="menu">
-            <div class="escolhar-contato">
+            <div class="escolher-contato">
                 <div class="texto-escolher">Escolha um contato<br>para enviar mensagem:</div>
                 <div class="contatos-visibilidade" onclick="selecionarContato(this)">
                     <div>
                         <ion-icon name="people"></ion-icon>
-                        <p>Todos</p>
+                        <p class="indentificador-contato">Todos</p>
                     </div>
-                    <ion-icon class="check-contato" name="checkmark-sharp"></ion-icon>
+                    <ion-icon class="check-contato mostrar-check-contato" name="checkmark-sharp"></ion-icon>
                 </div>
-                <div class="contatos-visibilidade" onclick="selecionarContato(this)">
-                    <div>
-                        <ion-icon name="person-circle"></ion-icon>
-                        <p>João</p>
-                    </div>
-                    <ion-icon class="check-contato" name="checkmark-sharp"></ion-icon>
-                </div>
+                
             </div>
             <div class="escolher-visibilidade" >
                 <div class="texto-escolher">Escolha a visibilidade:</div>
@@ -64,7 +49,7 @@
                         <ion-icon name="lock-open"></ion-icon>
                         <p>Público</p>
                     </div>
-                    <ion-icon class="check-visibilidade" name="checkmark-sharp"></ion-icon>
+                    <ion-icon class="check-visibilidade mostrar-check-visibilidade" name="checkmark-sharp"></ion-icon>
                 </div>
                 <div class="contatos-visibilidade" onclick="selecionarVisibilidade(this)">
                     <div>
@@ -79,8 +64,8 @@
     <div class="tela-de-entrada">
         <img src="/assets/logo 2.png" alt="Logo">
         <div class="input-botao">
-            <input type="text" placeholder="Digite seu nome">
-            <div class="botao" onclick="esconderTelaEntrada()">Entrar</div>
+            <input class="input-usuario" type="text" placeholder="Digite seu nome">
+            <div class="botao" onclick="entrarNaSala()">Entrar</div>
         </div>
     </div>
 
@@ -89,6 +74,7 @@
 
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="script.js"></script>
 
 </html>
