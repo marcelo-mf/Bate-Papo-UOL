@@ -34,16 +34,15 @@ function entrarNaSala() {
             alert("Insira um nome válido")
         }
     }
+
+    setInterval(manterConexao, 4800)
 }
 
     function manterConexao() {
     const manterConexao = axios.post('https://mock-api.driven.com.br/api/v4/uol/status', NomeUsuario)
-    manterConexao.then(repetirConexao)
     }
     
-    function repetirConexao () {
-    setInterval(manterConexao, 5000);
-    }   
+   
 
 function enviarMensagens() {
 
